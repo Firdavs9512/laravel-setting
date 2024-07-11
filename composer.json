@@ -1,0 +1,18 @@
+{
+    "name": "firdavs9512/laravel-setting",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Firdavs9512\\LaravelSetting\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Firdavs",
+            "email": "firdavs20fe@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
