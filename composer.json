@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "Firdavs9512\\LaravelSetting\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "authors": [
         {
