@@ -10,6 +10,21 @@ To install the package, you can use composer:
 composer require firdavs9512/laravel-setting
 ```
 
+### Publish Configuration and Migration
+
+After installing the package, you need to publish the configuration file and migration.
+
+```bash
+php artisan vendor:publish --provider="Firdavs9512\LaravelSetting\LaravelSettingServiceProvider"
+php artisan migrate
+```
+
+The first command publishes the configuration file to `config/laravel-setting.php` and the migration file for creating the settings table. The second command runs the migration to create the `laravel_settings` table.
+
+## Configuration
+
+The package provides a configuration file located at `config/laravel-setting.php` where you can customize various settings.
+
 ## Usage
 
 ### Setting and Getting Values
@@ -67,6 +82,21 @@ setting()->set('site_name', 'My Awesome Site');
 $siteName = setting('site_name', 'Default Site Name');
 ```
 
+## LaravelSettingServiceProvider
+
+The `LaravelSettingServiceProvider` is responsible for bootstrapping the package's services. It publishes the configuration and migration files and merges the package configuration with the application's configuration.
+
+## Migration
+
+The package includes a migration file that creates a `settings` table. This table is used to store the application settings.
+
+To create the `settings` table, run the following command after publishing the migration file:
+
+```bash
+php artisan migrate
+```
+
 ## License
 
 This package is open-source and licensed under the [MIT license](LICENSE).
+```
