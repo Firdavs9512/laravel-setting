@@ -99,4 +99,3 @@ php artisan migrate
 ## License
 
 This package is open-source and licensed under the [MIT license](LICENSE).
-```
