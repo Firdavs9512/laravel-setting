@@ -16,7 +16,7 @@
             "email": "firdavs20fe@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "version": "1.0.0",
+    "minimum-stability": "stabile",
+    "version": "1.0.1",
     "require": {}
 }
