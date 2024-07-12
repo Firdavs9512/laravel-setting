@@ -1,5 +1,6 @@
 {
     "name": "firdavs9512/laravel-setting",
+    "description": "Laravel setting package",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -16,7 +17,7 @@
             "email": "firdavs20fe@gmail.com"
         }
     ],
-    "minimum-stability": "stabile",
-    "version": "1.0.1",
+    "minimum-stability": "stable",
+    "version": "1.0.2",
     "require": {}
 }
