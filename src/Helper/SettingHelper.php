@@ -34,9 +34,9 @@ class SettingHelper
     public function get(string $key, $default = null)
     {
         // Check cache enabled and key exists in cache
-        $key = "laravel-setting-" . $key;
-        if (config('laravel-setting.cache.enabled') && cache()->has($key)) {
-            return cache($key);
+        $cacheKey = "laravel-setting-" . $key;
+        if (config('laravel-setting.cache.enabled') && cache()->has($cacheKey)) {
+            return cache($cacheKey);
         }
 
         // Get value from database
@@ -54,7 +54,7 @@ class SettingHelper
 
         // Cache value
         if (config('laravel-setting.cache.enabled')) {
-            cache([$key => $value], config('laravel-setting.cache.expiration'));
+            cache([$cacheKey => $value], config('laravel-setting.cache.expiration'));
         }
 
         return $value;
