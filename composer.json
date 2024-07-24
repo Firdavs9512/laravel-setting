@@ -19,7 +19,7 @@
     ],
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "version": "1.0.6",
+    "version": "1.0.7",
     "require": {},
     "extra": {
         "laravel": {
@@ -27,5 +27,5 @@
                 "Firdavs9512\\LaravelSetting\\LaravelSettingServiceProvider"
             ]
         }
-    },
+    }
 }
