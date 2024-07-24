@@ -13,7 +13,7 @@ class SettingHelper
         $this->table = $prefix . "_settings";
     }
 
-    public function set(string $key, $value)
+    public function set(string $key, $value): bool
     {
         // Check old value exists or not
         $old = DB::table($this->table)->where('key', $key)->first();
@@ -27,6 +27,8 @@ class SettingHelper
             // Insert new value
             DB::table($this->table)->insert(['key' => $key, 'value' => $value]);
         }
+
+        return true;
     }
 
     public function get(string $key, $default = null)
