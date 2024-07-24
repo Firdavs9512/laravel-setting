@@ -13,5 +13,5 @@ return [
   /*
   * Database table name to store settings
   */
-  'table_prefix' => 'settings',
+  'table_prefix' => 'laravel',
 ];
