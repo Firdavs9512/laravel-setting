@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $prefix = config('laravel-setting.table_prefix);
+        $prefix = config('laravel-setting.table_prefix');
 
         Schema::create($prefix . "_settings", function (Blueprint $table) {
             $table->id();
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        $prefix = config('laravel-setting.table_prefix);
+        $prefix = config('laravel-setting.table_prefix');
         Schema::dropIfExists($prefix . "_settings");
     }
 };
