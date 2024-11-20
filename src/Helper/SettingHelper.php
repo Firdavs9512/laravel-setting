@@ -28,6 +28,11 @@ class SettingHelper
             DB::table($this->table)->insert(['key' => $key, 'value' => $value]);
         }
 
+        $cacheKey = "laravel-setting-" . $key;
+        if (config('laravel-setting.cache.enabled') && cache()->has($cacheKey)) {
+            cache()->forget($cacheKey);
+        }
+
         return true;
     }
 
